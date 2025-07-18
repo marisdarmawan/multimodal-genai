@@ -19,7 +19,7 @@ if google_api_key:
         genai.configure(api_key=google_api_key)
         # Using a powerful multimodal model like gemini-1.5-pro
         # It's excellent for handling various file types.
-        model = genai.GenerativeModel('gemini-1.5-pro-latest')
+        model = genai.GenerativeModel('gemini-2.5-flash')
     except Exception as e:
         st.error(f"Failed to configure Google API: {e}")
 else:
@@ -75,7 +75,7 @@ with st.sidebar:
     Simply type your request or upload a file and see the magic! ✨
     """)
     st.subheader("Model Used:")
-    st.markdown("Google Gemini 1.5 Pro")
+    st.markdown("Google Gemini 2.5 Flash")
     st.markdown("---")
     st.markdown("Original code by Mohammad Aris Darmawan (Modified for Multimodal Gemini API)")
 
